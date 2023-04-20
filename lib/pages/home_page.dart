@@ -2,13 +2,13 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:project_agiles/models/user_model.dart';
+import 'package:project_agiles/pages/chofer/chofer_page.dart';
 import 'package:project_agiles/pages/inicio_page.dart';
 import 'package:project_agiles/pages/rutas_page.dart';
 import 'package:project_agiles/services/chofer_service.dart';
 import 'package:provider/provider.dart';
 import 'package:transporte/pages/admin/agregar_chofer.dart';
 import 'package:transporte/pages/admin/lista_mod_choferes.dart';
-import 'package:transporte/pages/chofer/chofer_page.dart';
 
 import '../services/ruta_servive.dart';
 import '../widgets/cards.dart';
