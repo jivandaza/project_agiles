@@ -18,23 +18,20 @@ die();
     $identificacion = $_POST['identificacion'];
     $nombre = $_POST['nombre'];   
     $telefono = $_POST['telefono'];
-    $placa = $_POST['placa'];
     $tipo = $_POST['tipo'];
     $ruta = $_POST['ruta'];
-    $placa = $_POST['password']; 
+    $password = $_POST['password']; 
 
-    $sql = "INSERT INTO usuario (id, correo, identificacion,nombre,telefono,placa,estado,tipo,ruta,password)
-     VALUES (default,'$correo', '$identificacion', '$nombre', '$telefono', '$placa', '$estado','$tipo',default,'$password')";
+    $sql = "INSERT INTO usuario (id, correo, identificacion,nombre,placa,telefono,tipo,ruta,password)
+     VALUES (default,'$correo', '$identificacion', '$nombre', '$placa', '$telefono','$tipo',default,'$password')";
     
     if (mysqli_query($con, $sql)) {
-    $respuesta = array("mensaje"=>"Datos Modificados");
+    $respuesta = array("mensaje"=>"Datos registrados");
     $json_string = json_encode($respuesta);
     echo $json_string;
   } else {
-    $respuesta = array("mensaje"=>"Error". mysqli_error($con));
+    $respuesta = array("mensaje"=>"Error al registrar". mysqli_error($con));
     $json_string = json_encode($respuesta);
     echo $json_string;
   }  
 ?>
-
-
