@@ -16,7 +16,8 @@ die();
      
     $correo = $_POST['correo'];   
     $identificacion = $_POST['identificacion'];
-    $nombre = $_POST['nombre'];   
+    $nombre = $_POST['nombre'];
+    $placa = $_POST['placa'];   
     $telefono = $_POST['telefono'];
     $tipo = $_POST['tipo'];
     $ruta = $_POST['ruta'];
