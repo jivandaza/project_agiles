@@ -1,0 +1,74 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_icons/flutter_icons.dart';
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Mockup Principal',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: MyHomePage(),
+    );
+  }
+}
+
+class MyHomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Mockup Principal'),
+      ),
+      body: Center(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: <Widget>[
+            buildIconButton(
+              icon: FontAwesome5.user_plus,
+              text: 'Registrar Chófer',
+            ),
+            buildIconButton(
+              icon: FontAwesome5.list,
+              text: 'Listar Chófer',
+            ),
+            buildIconButton(
+              icon: FontAwesome5.edit,
+              text: 'Modificar Chófer',
+            ),
+            buildIconButton(
+              icon: FontAwesome5.car,
+              text: 'Chóferes en Turno',
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget buildIconButton({IconData icon, String text}) {
+    return Container(
+      width: 150,
+      child: Column(
+        children: [
+          IconButton(
+            icon: Icon(icon),
+            iconSize: 80,
+            onPressed: () {
+              
+            },
+          ),
+          SizedBox(height: 8),
+          Text(
+            text,
+            textAlign: TextAlign.center,
+            style: TextStyle(fontSize: 16),
+          ),
+        ],
+      ),
+    );
+  }
+}
