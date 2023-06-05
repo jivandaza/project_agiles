@@ -1,0 +1,129 @@
+// Mockup Registrarchofer
+
+import 'package:flutter/material.dart';
+
+void main() => runApp(RegisterDriverMockup());
+
+class RegisterDriverMockup extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Mockup Registrar chofer',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: RegisterDriverPage(),
+    );
+  }
+}
+
+class RegisterDriverPage extends StatefulWidget {
+  @override
+  _RegisterDriverPageState createState() => _RegisterDriverPageState();
+}
+
+class _RegisterDriverPageState extends State<RegisterDriverPage> {
+  final _formKey = GlobalKey<FormState>();
+
+  // Form fields
+  String _email = '';
+  String _contraseña = '';
+  String _identificacion = '';
+  String _nombrecompleto = '';
+  String _telefono = '';
+  String _placa = '';
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Register Driver'),
+      ),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.all(16.0),
+          child: Form(
+            key: _formKey,
+            child: Column(
+              children: [
+                TextFormField(
+                  decoration: InputDecoration(labelText: 'Email'),
+                  validator: (value) {
+                    if (value.isEmpty) {
+                      return 'Por favor ingrese el correo';
+                    }
+                    return null;
+                  },
+                  onSaved: (value) {
+                    _email = value;
+                  },
+                ),
+                TextFormField(
+                  decoration: InputDecoration(labelText: 'Password'),
+                  obscureText: true,
+                  validator: (value) {
+                    if (value.isEmpty) {
+                      return 'Por favor ingrese uan contraseña';
+                    }
+                    return null;
+                  },
+                  onSaved: (value) {
+                    _contraseña = value;
+                  },
+                ),
+                TextFormField(
+                  decoration: InputDecoration(labelText: 'identificacion'),
+                  validator: (value) {
+                    if (value.isEmpty) {
+                      return 'Por favor ingrese la identificacion del chofer';
+                    }
+                    return null;
+                  },
+                  onSaved: (value) {
+                    _identificacion = value;
+                  },
+                ),
+                TextFormField(
+                  decoration: InputDecoration(labelText: 'nombrecompleto'),
+                  validator: (value) {
+                    if (value.isEmpty) {
+                      return 'Por favor ingrese el nombre del chofer';
+                    }
+                    return null;
+                  },
+                  onSaved: (value) {
+                    _nombrecompleto = value;
+                  },
+                ),
+                TextFormField(
+                  decoration: InputDecoration(labelText: 'Teléfono'),
+                  validator: (value) {
+                    if (value.isEmpty) {
+                      return 'Por favor ingrese el telefono';
+                    }
+                    return null;
+                  },
+                  onSaved: (value) {
+                    _telefono = value;
+                  },
+                ),
+                TextFormField(
+                  decoration: InputDecoration(labelText: 'Placa del vehículo'),
+                  validator: (value) {
+                    if (value.isEmpty) {
+                     return 'Por favor ingrese la placa del vehiculo';
+                    }
+                    return null;
+                  },
+                  onSaved: (value) {
+                    _placa = value;
+                  },
+                ),
+              ]
+            )
+          )
+        ) 
+      )
+    )
+  }
+}

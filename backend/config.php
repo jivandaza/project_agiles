@@ -2,9 +2,9 @@
 
 session_start();
 $host = "localhost"; /* equipo */
-$user = "id18947852_bestparkingapp1"; /* usuario */
-$password = "!bestparkingO1!"; /* clave */
-$dbname = "id18947852_bestparkingapp"; /* base de datos */
+$user = "id18968237_cootraznorte"; /* usuario */
+$password = "2q>KCZIvT{7-ykyQ"; /* clave */
+$dbname = "id18968237_cootraznortedb"; /* base de datos */
 
 $con = mysqli_connect($host, $user, $password,$dbname);
 

@@ -1,0 +1,89 @@
+//Mockup listar chóferes
+
+import 'package:flutter/material.dart';
+
+void main() => runApp(DriverListMockup());
+
+class DriverListMockup extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Lista de Chóferes',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: DriverListPage(),
+    );
+  }
+}
+
+class Driver {
+  String email;
+  String password;
+  String identificacion;
+  String nombre;
+  String telefono;
+  String placavehiculo;
+
+  Driver({
+    required this.email,
+    required this.password,
+    required this.identificacion,
+    required this.nombre,
+    required this.telefono,
+    required this.placavehiculo,
+  });
+}
+
+class DriverListPage extends StatefulWidget {
+  @override
+  _DriverListPageState createState() => _DriverListPageState();
+}
+
+class _DriverListPageState extends State<DriverListPage> {
+  List<Driver> drivers = [
+    Driver(
+      email: 'chofer1@example.com',
+      password: 'password1',
+      identificacion: '001',
+      nombre: 'Juan Pérez',
+      telefono: '1234567890',
+      placavehiculo: 'ABC123',
+    ),
+    Driver(
+      email: 'chofer2@example.com',
+      password: 'password2',
+      identificacion: '002',
+      nombre: 'María López',
+      telefono: '9876543210',
+      placavehiculo: 'XYZ789',
+    ),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Lista de Chóferes'),
+      ),
+      body: ListView.builder(
+        itemCount: drivers.length,
+        itemBuilder: (context, index) {
+          return ListTile(
+            title: Text('Correo: ${drivers[index].email}'),
+            subtitle: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text('Contraseña: ${drivers[index].password}'),
+                Text('ID del Chófer: ${drivers[index].identificacion}'),
+                Text('Nombre del Chófer: ${drivers[index].nombre}'),
+                Text('Celular: ${drivers[index].telefono}'),
+                Text('Placa del Vehículo: ${drivers[index].placavehiculo}'),
+              ],
+            ),
+          );
+        },
+      ),
+    );
+  }
+}
