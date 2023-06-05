@@ -150,7 +150,7 @@ class _FormState extends State<_Form> {
              if(value!.length==7){
                const pattern=r'^[a-zA-Z0-9]+-[a-zA-Z0-9]';
                 RegExp regExp  = RegExp(pattern);
-              return regExp.hasMatch(value ?? '')
+              return regExp.hasMatch(value)
               ? null
               : 'no es una placa válida';}
               return value.length != 7 ? 'debe contener 7 caracteres' : null;
@@ -158,26 +158,26 @@ class _FormState extends State<_Form> {
           ),
           ButtonBlue(label: 'Agregar',
             onPressed: userForm.isValid ? () async{
-              FocusManager.instance.primaryFocus?.unfocus();
-              final userService = Provider.of<UserService>(context, listen: false);
-              bool? paso = await userService.createUser(user);
-             // paso! ? Get.back():
-              print(paso);
+            //   FocusManager.instance.primaryFocus?.unfocus();
+            //   final userService = Provider.of<UserService>(context, listen: false);
+            //   bool? paso = await userService.createUser(user);
+            //  // paso! ? Get.back():
+            //   print(paso);
               
-              if(paso!){
+            //   if(paso!){
               Get.back();
                  QuickAlert.show(context: context,
                 type: QuickAlertType.success,
                 title: 'Registro Exitoso',
                 text: 'Chofer Agregado');
-              } else {
+              //} else {
               
               QuickAlert.show(context: context,
                 type: QuickAlertType.error,
-                title: 'Error',
-                text: userService.mensaje
+                title: 'Error'
+                //text: userService.mensaje
               );
-            }
+            //}
             }: null
           )
         ],
