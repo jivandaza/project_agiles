@@ -4,7 +4,6 @@ import 'package:project_agiles/pages/admin/modificar_chofer.dart';
 import 'package:project_agiles/services/auth_service.dart';
 import 'package:project_agiles/services/user_service.dart';
 import 'package:provider/provider.dart';
-import 'package:quickalert/quickalert.dart';
 import '../../models/user_model.dart';
 
 
@@ -79,11 +78,6 @@ class ListaModChoferes extends StatelessWidget {
                                         final paso = await userService.deleteUser(chofer);
                                         if(paso){
                                           Get.back();
-                                          QuickAlert.show(context: context,
-                                            type: QuickAlertType.confirm,
-                                            title: 'Ok',
-                                            text: 'Chofer eliminado con exito'
-                                          );
                                         }
                                       },
                                     ),

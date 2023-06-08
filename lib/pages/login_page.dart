@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 import 'package:project_agiles/pages/home_page.dart';
 import 'package:project_agiles/services/auth_service.dart';
 import 'package:provider/provider.dart';
-import 'package:quickalert/quickalert.dart';
 
 import '../provider/login_provider.dart';
 import '../services/user_service.dart';
@@ -110,11 +109,7 @@ class _FormState extends State<_Form> {
                 userService.user = authService.user;
                 Get.offAll(HomePage(user: authService.user,));
               } else {
-                  QuickAlert.show(context: context,
-                  type: QuickAlertType.error,
-                  title: 'Error',
-                  text: authService.mensaje
-                );
+                  // msg
               }
             } : null
           ),

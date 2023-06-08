@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:project_agiles/models/user_model.dart';
 import 'package:project_agiles/pages/home_page.dart';
 import 'package:provider/provider.dart';
-import 'package:quickalert/quickalert.dart';
 
 import '../../provider/user_form_provider.dart';
 import '../../services/user_service.dart';
@@ -106,11 +105,6 @@ class _FormState extends State<_Form> {
               final userService = Provider.of<UserService>(context, listen: false);
               await userService.updateUser(widget.chofer);
               Get.offAll(HomeAdmin(size: size,));
-              QuickAlert.show(context: context,
-                type: QuickAlertType.confirm,
-                title: 'OK',
-                text: 'Chofer modificado exitosamente'
-              );
             }: null
           )
         ],

@@ -320,14 +320,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "6.0.5"
-  quickalert:
-    dependency: "direct main"
-    description:
-      name: quickalert
-      sha256: "7a3172444ccd7fe135dcdc15568e621d9efe4e48f20a40a58097cba8a4135e3e"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.0.1"
   sky_engine:
     dependency: transitive
     description: flutter

@@ -4,7 +4,6 @@ import 'package:project_agiles/provider/user_form_provider.dart';
 import 'package:project_agiles/services/user_service.dart';
 import 'package:project_agiles/widgets/button_blue.dart';
 import 'package:provider/provider.dart';
-import 'package:quickalert/quickalert.dart';
 
 import '../../widgets/text_input.dart';
 
@@ -166,17 +165,8 @@ class _FormState extends State<_Form> {
               
             //   if(paso!){
               Get.back();
-                 QuickAlert.show(context: context,
-                type: QuickAlertType.success,
-                title: 'Registro Exitoso',
-                text: 'Chofer Agregado');
               //} else {
               
-              QuickAlert.show(context: context,
-                type: QuickAlertType.error,
-                title: 'Error'
-                //text: userService.mensaje
-              );
             //}
             }: null
           )
