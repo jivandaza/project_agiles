@@ -3,7 +3,7 @@ import 'package:project_agiles/models/ruta_model.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class RutaPage extends StatelessWidget {
-  const RutaPage({super.key, this.rutas});
+  const RutaPage({this.rutas});
 
   final List<Ruta>? rutas;
 

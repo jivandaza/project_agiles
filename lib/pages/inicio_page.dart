@@ -8,7 +8,7 @@ import 'package:provider/provider.dart';
 
 
 class InicioPage extends StatelessWidget {
-  const InicioPage({super.key});
+  const InicioPage();
 
 
   @override

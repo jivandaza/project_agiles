@@ -9,7 +9,7 @@ import 'package:quickalert/quickalert.dart';
 import '../../widgets/text_input.dart';
 
 class AgregarChofer extends StatefulWidget {
-  const AgregarChofer({super.key});
+  const AgregarChofer();
 
   @override
   State<AgregarChofer> createState() => _AgregarChoferState();

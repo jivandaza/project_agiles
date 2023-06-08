@@ -40,7 +40,7 @@ dependencies:
   firebase_core:
   firebase_auth:
   cloud_firestore:
-  quickalert: ^1.0.0
+  quickalert: 0.0.1
   url_launcher: ^6.1.7
 
 dev_dependencies:

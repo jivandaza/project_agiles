@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Dropdown extends StatefulWidget {
-  const Dropdown({super.key, required this.data, required this.tipo, required this.onChange, required this.validator});
+  const Dropdown({required this.data, required this.tipo, required this.onChange, required this.validator});
 
   final List data;
   final String tipo;

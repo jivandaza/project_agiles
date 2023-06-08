@@ -14,7 +14,7 @@ import '../../widgets/text_input.dart';
 import '../inicio_page.dart';
 
 class ChoferPage extends StatefulWidget {
-  const ChoferPage({super.key}); 
+  const ChoferPage(); 
   @override
   State<ChoferPage> createState() => _ChoferPageState();
 }
@@ -55,7 +55,7 @@ class _ChoferPageState extends State<ChoferPage> {
 }
 
 class RutaExistente extends StatelessWidget {
-  const RutaExistente({super.key});
+  const RutaExistente();
 
   @override
   Widget build(BuildContext context) {
@@ -84,7 +84,7 @@ class RutaExistente extends StatelessWidget {
 }
 
 class FormChofer extends StatefulWidget {
-  const FormChofer({super.key, required this.user});
+  const FormChofer({required this.user});
 
   final Users user;
   @override

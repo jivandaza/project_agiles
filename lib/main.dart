@@ -15,7 +15,7 @@ void main() async {
 }
 
 class AppProvider extends StatelessWidget {
-  const AppProvider({super.key});
+  const AppProvider();
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +40,7 @@ class AppProvider extends StatelessWidget {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp();
 
   @override
   Widget build(BuildContext context) {

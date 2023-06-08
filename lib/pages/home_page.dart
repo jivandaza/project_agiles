@@ -15,7 +15,7 @@ import '../widgets/cards.dart';
 import 'admin/lista.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key, required this.user});
+  const HomePage({required this.user});
 
   final Users user;
 

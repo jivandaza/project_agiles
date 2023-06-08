@@ -12,7 +12,7 @@ class CustomTextForm extends StatelessWidget {
   final bool isPassword;
   final TextInputType keyboardType;
 
-  const CustomTextForm({super.key, 
+  const CustomTextForm({ 
     required this.controller, 
     required this.label, 
     required this.onChange, 
@@ -67,7 +67,7 @@ class CustomTextFormInt extends StatelessWidget {
   final bool isPassword;
   final TextInputType keyboardType;
 
-  const CustomTextFormInt({super.key, 
+  const CustomTextFormInt({ 
     required this.controller, 
     required this.label, 
     required this.onChange, 

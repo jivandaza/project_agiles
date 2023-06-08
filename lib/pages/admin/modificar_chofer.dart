@@ -11,7 +11,7 @@ import '../../widgets/button_blue.dart';
 import '../../widgets/text_input.dart';
 
 class ModificarChofer extends StatelessWidget {
-  const ModificarChofer({super.key, required this.chofer});
+  const ModificarChofer({required this.chofer});
 
   final Users chofer;
 

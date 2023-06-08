@@ -4,7 +4,7 @@ import '../../models/user_model.dart';
 
 
 class ListarChofer extends StatelessWidget {
-  const ListarChofer({super.key, required this.choferes,});
+  const ListarChofer({required this.choferes,});
   
   final  List<Users> choferes;
 

@@ -13,7 +13,7 @@ import '../widgets/text_input.dart';
   
 
 class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+  const LoginPage();
 
 
   @override
